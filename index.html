@@ -1,9 +1,80 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/mvp.css">
-    </head>
-    <body style="background-color: #685077;">
-        <h1>Hello World</h1>
-    </body>
-</html>
+<style>
+    body {
+      font-family: sans-serif;
+      color: white;
+    }
+    
+    .container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  
+    .canvas {
+      position: relative;
+      width: 300px;
+      height: 450px;
+      background-color: #333;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+  
+    .tracker {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+  
+    /* Positioning the trackers */
+    .tr-1 { top: 10px; left: 10px; }
+    .tr-2 { top: 10px; right: 10px; }
+    .tr-3 { bottom: 10px; left: 10px; }
+    .tr-4 { bottom: 10px; right: 10px; }
+    /* Add other tracker positions as needed */
+  
+    #card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      background-color: #222;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+  
+    #prompt {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+  
+    .cyber-lines span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: #00ffff;
+      animation: cyberLineEffect 1s infinite linear;
+    }
+  
+    @keyframes cyberLineEffect {
+      0% { width: 0; }
+      50% { width: 100%; }
+      100% { width: 0; }
+    }
+  
+    /* Hover effect for the card */
+    #card:hover {
+      transform: translate(-50%, -50%) rotateY(15deg);
+      transition: transform 0.5s ease-in-out;
+    }
+  </style>
+  
